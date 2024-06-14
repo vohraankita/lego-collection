@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lego Collection</title>
+    <link href="css/main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="navbar bg-base-100">
+      <div class="flex-1">
+        <a href="/" class="btn btn-ghost normal-case text-xl"
+          >Lego Collection</a
+        >
+      </div>
+      <div class="flex-none lg:hidden">
+        <button
+          class="btn btn-square btn-ghost"
+          onClick="{() => document.getElementById('mobile-menu').classList.toggle('hidden')}"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="hidden lg:flex flex-none">
+        <ul class="menu menu-horizontal px-1">
+          <li><a href="/about">About</a></li>
+          <li>
+            <details>
+              <summary>Theme</summary>
+              <ul class="p-2 bg-base-100 rounded-t-none">
+                <li><a href="/lego/sets?theme=Technic">Technic</a></li>
+                <li><a href="/lego/sets?theme=Star%20Wars">Star Wars</a></li>
+                <li><a href="/lego/sets?theme=City">City</a></li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </div>
+      <div id="mobile-menu" class="hidden lg:hidden">
+        <ul class="menu menu-vertical p-2 w-full">
+          <li><a href="/about">About</a></li>
+          <li>
+            <details>
+              <summary>Theme</summary>
+              <ul class="p-2 bg-base-100 rounded-t-none">
+                <li><a href="/lego/sets?theme=Technic">Technic</a></li>
+                <li><a href="/lego/sets?theme=Star%20Wars">Star Wars</a></li>
+                <li><a href="/lego/sets?theme=City">City</a></li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container mx-auto">
+      <img src="https://http.dog/404.jpg" />
+    </div>
+  </body>
+</html>
