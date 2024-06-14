@@ -8,7 +8,7 @@
  *
  *  Name: Ankita Vohra Student ID: 141823229 Date: 06/14/2024
  *
- *  Published URL: ___________________________________________________________
+ *  Published URL: https://lego-collection-five.vercel.app/
  *
  ********************************************************************************/
 
@@ -38,7 +38,7 @@ app.get("/lego/sets", async (req, res) => {
       let sets = await legoData.getSetsByTheme(theme);
       res.send(sets);
     } catch (err) {
-      res.sendStatus(404);
+      res.sendStatus(404).sendFile(path.join(__dirname, "/views/404.html"));
     }
     return;
   }
@@ -52,7 +52,7 @@ app.get("/lego/sets/:id", async (req, res) => {
     let set = await legoData.getSetByNum(id);
     res.send(set);
   } catch (err) {
-    res.sendStatus(404);
+    res.sendStatus(404).sendFile(path.join(__dirname, "/views/404.html"));
   }
 });
 
