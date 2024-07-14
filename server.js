@@ -6,11 +6,12 @@
  *
  *  https://www.senecacollege.ca/about/policies/academic-integrity-policy.html
  *
- *  Name: Ankita Vohra Student ID: 141823229 Date: 06/14/2024
+ *  Name: Ankita Vohra Student ID: 141823229 Date: 07/14/2024
  *
  *  Published URL: https://lego-collection-five.vercel.app/
  *
  ********************************************************************************/
+require("pg");
 
 const legoData = require("./modules/legoSets");
 const path = require("path");
