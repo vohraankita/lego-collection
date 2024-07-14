@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lego Collection</title>
+    <link href="/css/main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="navbar bg-base-100 flex-col lg:flex-row relative">
+      <div class="flex-1">
+        <a href="/" class="btn btn-ghost normal-case text-xl"
+          >Lego Collection</a
+        >
+      </div>
+      <div class="flex-none lg:hidden left-2 top-2 absolute">
+        <button
+          class="btn btn-square btn-ghost"
+          onClick="document.getElementById('mobile-menu').classList.toggle('hidden')"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="hidden lg:flex flex-none">
+        <ul class="menu menu-horizontal px-1">
+          <li><a href="/about">About</a></li>
+          <li>
+            <details>
+              <summary>Theme</summary>
+              <ul class="p-2 bg-base-100 rounded-t-none">
+                <li><a href="/lego/sets?theme=Technic">Technic</a></li>
+                <li><a href="/lego/sets?theme=Star%20Wars">Star Wars</a></li>
+                <li><a href="/lego/sets?theme=City">City</a></li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </div>
+      <div id="mobile-menu" class="hidden lg:hidden">
+        <ul class="menu menu-vertical p-2 w-full">
+          <li><a href="/about">About</a></li>
+          <li>
+            <details>
+              <summary>Theme</summary>
+              <ul class="p-2 bg-base-100 rounded-t-none">
+                <li><a href="/lego/sets?theme=Technic">Technic</a></li>
+                <li><a href="/lego/sets?theme=Star%20Wars">Star Wars</a></li>
+                <li><a href="/lego/sets?theme=City">City</a></li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container mx-auto">
+      <div class="hero min-h-screen bg-base-200">
+        <div class="hero-content text-center">
+          <div class="max-w-md">
+            <h1 class="text-5xl font-bold">Hello there</h1>
+            <p class="py-6">
+              Explore the world of Lego sets. Find your favorite theme and start
+              building your collection.
+            </p>
+            <a href="/lego/sets" class="btn btn-primary"> Get Started </a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center items-start"
+      >
+        <div class="card w-96 bg-base-100 shadow-xl">
+          <figure>
+            <img
+              class="object-cover"
+              src="https://cdn.rebrickable.com/media/sets/010423-1.jpg"
+              alt="The Majestic Horse Set Image"
+            />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">The Majestic Horse</h2>
+            <p>
+              Given to select members of the Recognised Lego Fan Media group for
+              an April fools prank in 2023, only around 10 are known to exist.
+            </p>
+            <div class="card-actions justify-end">
+              <a href="/lego/sets/010423-1" class="btn btn-primary">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card w-96 bg-base-100 shadow-xl">
+          <figure>
+            <img
+              class="object-cover"
+              src="https://cdn.rebrickable.com/media/sets/003-1.jpg"
+              alt="Master Mechanic Set Image"
+            />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Master Mechanic Set</h2>
+            <p>
+              This set was released in America (USA/CAN) by Samsonite in 1966.
+              It was never released in Europe.
+            </p>
+            <div class="card-actions justify-end">
+              <a href="/lego/sets/003-1" class="btn btn-primary">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card w-96 bg-base-100 shadow-xl">
+          <figure>
+            <img
+              class="object-cover"
+              src="https://cdn.rebrickable.com/media/sets/0241357594-1.jpg"
+              alt="Star Wars: Build Your Own Adventure: Galactic Missions"
+            />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">
+              Star Wars: Build Your Own Adventure: Galactic Missions
+            </h2>
+            <p>
+              Published by DK Children (Dorling Kindersley) as a hardcover
+              released on August 1, 2019 in the United Kingdom and on August 6,
+              2019 in the United States. The book contains 80 pages.
+            </p>
+            <div class="card-actions justify-end">
+              <a href="/lego/sets/0241357594-1" class="btn btn-primary"
+                >Buy Now</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
