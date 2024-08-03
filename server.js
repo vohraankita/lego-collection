@@ -12,6 +12,7 @@
  *
  ********************************************************************************/
 require("pg");
+const path = require("path");
 const legoData = require("./modules/legoSets");
 const authData = require("./modules/auth-service");
 const express = require("express");
