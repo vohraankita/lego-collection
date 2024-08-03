@@ -49,11 +49,14 @@
        <p>
         <span class="font-bold">Set Name: </span> <%= set.name %> <br />
         <span class="font-bold">Year Released: </span> <%= set.year %> <br />
-        <span class="font-bold">Theme: </span> <%= set.Theme.theme %> <br />
+        <span class="font-bold">Theme: </span> <%= set.Theme.name %> <br />
         <span class="font-bold">Number of Parts: </span> <%= set.num_parts %> <br /><br />
 
         <span id="quote"></span>
         <br /><br />
+        <% if(session.user){ %>
+          <a class="btn btn-success btn-sm" href="/lego/editSet/<%= set.set_num %>">EDIT SET: <%= set.name.toUpperCase() %></a>
+        <% } %>
         <a class="btn btn-primary btn-sm" href="#" onclick="history.back(); return false;">RETURN</a>
        </p>
 
