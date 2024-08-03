@@ -11,6 +11,7 @@
  *  Published URL: https://lego-collection-five.vercel.app/
  *
  ********************************************************************************/
+require("pg");
 const legoData = require("./modules/legoSets");
 const authData = require("./modules/auth-service");
 const express = require("express");
@@ -19,7 +20,8 @@ const app = express();
 
 const HTTP_PORT = process.env.PORT || 8080;
 
-app.use(express.static("public"));
+app.set('views', path.join(__dirname, 'views'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(
   clientSessions({
