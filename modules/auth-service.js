@@ -38,11 +38,12 @@ function initialize() {
 }
 
 function registerUser(userData) {
-  return new Promise((resolve, reject) => {
+  return new Promise(async (resolve, reject) => {
     let { password, password2 } = userData;
     if (password !== password2) {
       reject("Passwords do not match");
     }
+    if(!User) await initialize();
     let newUser = new User(userData);
     bcrypt
       .hash(newUser.password, 10)
@@ -67,8 +68,9 @@ function registerUser(userData) {
 }
 
 function checkUser(userData) {
-  return new Promise((resolve, reject) => {
+  return new Promise(async (resolve, reject) => {
     let { userName, password, userAgent } = userData;
+    if(!User) await initialize();
     User.find({ userName })
       .exec()
       .then((user) => {
