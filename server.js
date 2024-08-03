@@ -186,14 +186,19 @@ console.log("Starting server...");
 
 legoData
   .initialize()
-  .then(authData.initialize)
   .then(() => {
+    console.log("legoData initialized successfully.");
+    return authData.initialize();
+  })
+  .then(() => {
+    console.log("authData initialized successfully.");
     app.listen(HTTP_PORT, () => {
-      console.log(`server listening on: ${HTTP_PORT}`);
+      console.log(`Server listening on: ${HTTP_PORT}`);
     });
   })
   .catch((err) => {
-    console.log(err);
-  });
+    console.error("Failed to initialize:", err);
+    process.exit(1); // Exit the process if initialization fails
+  })
 
 module.exports = app;
