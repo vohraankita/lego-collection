@@ -43,7 +43,7 @@ function registerUser(userData) {
     if (password !== password2) {
       reject("Passwords do not match");
     }
-    let newUser = User(userData);
+    let newUser = new User(userData);
     bcrypt
       .hash(newUser.password, 10)
       .then((hash) => {
